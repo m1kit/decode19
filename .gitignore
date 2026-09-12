@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 *.class
 student/cpp/decoder
+.instructor/
