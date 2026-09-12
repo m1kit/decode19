@@ -20,13 +20,25 @@ PixelGrid = list[list[Pixel]]
 
 
 DECODERS = {
-    module.__name__.rsplit(".", 1)[-1]: module.decode
-    for module in (
-        japanese_braille, morse, code39, pzn, ean13, telepen,
-        dx_film_edge, hccb, aztec_rune, code128,
-        data_matrix, qr, micro_qr, rmqr, aztec, pdf417,
-        micro_pdf417, databar_expanded_stacked, maxicode,
-    )
+    "00_braille": japanese_braille.decode,
+    "01_morse": morse.decode,
+    "02_code39": code39.decode,
+    "03_pzn": pzn.decode,
+    "04_ean13": ean13.decode,
+    "05_telepen": telepen.decode,
+    "06_dx_film_edge": dx_film_edge.decode,
+    "07_hccb": hccb.decode,
+    "08_aztec_rune": aztec_rune.decode,
+    "09_code128": code128.decode,
+    "10_data_matrix": data_matrix.decode,
+    "11_qr": qr.decode,
+    "12_micro_qr": micro_qr.decode,
+    "13_rmqr": rmqr.decode,
+    "14_aztec": aztec.decode,
+    "15_pdf417": pdf417.decode,
+    "16_micro_pdf417": micro_pdf417.decode,
+    "17_databar_expanded_stacked": databar_expanded_stacked.decode,
+    "18_maxicode": maxicode.decode,
 }
 
 SUPPORTED_TYPES = set(DECODERS)

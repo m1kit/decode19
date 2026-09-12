@@ -8,10 +8,11 @@ public final class Decoder {
     public record Pixel(int red, int green, int blue) {}
 
     private static final Set<String> SUPPORTED_TYPES = Set.of(
-        "japanese_braille", "morse", "code39", "pzn", "ean13", "telepen",
-        "dx_film_edge", "hccb", "aztec_rune", "code128",
-        "data_matrix", "qr", "micro_qr", "rmqr", "aztec", "pdf417",
-        "micro_pdf417", "databar_expanded_stacked", "maxicode"
+        "00_braille", "01_morse", "02_code39", "03_pzn", "04_ean13",
+        "05_telepen", "06_dx_film_edge", "07_hccb", "08_aztec_rune",
+        "09_code128", "10_data_matrix", "11_qr", "12_micro_qr", "13_rmqr",
+        "14_aztec", "15_pdf417", "16_micro_pdf417",
+        "17_databar_expanded_stacked", "18_maxicode"
     );
 
     /** Decode a row-major 2-D pixel array and return text without a newline. */
